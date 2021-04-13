@@ -5,26 +5,24 @@
       </h1>
       <div class="btn-container">
         <Button @counter-change="decrement" buttonText="-" />
-        <p>Counter: {{counter}}</p>
+        <p>Counter: {{counter}} </p>
         <Button @counter-change="increment" buttonText="+"  />
       </div>
   </div>
 </template>
 
 <script lang="ts">
-import {Vue, Component, Prop, Emit} from 'vue-property-decorator'
+import {Vue, Component, Prop} from 'vue-property-decorator'
 
 @Component
 export default class Counter extends Vue {
   counter: number = 0
 
-
-  increment():void{
+  increment ():void {
     this.counter++
   }
 
-
-  decrement():void{
+  decrement ():void {
     this.counter--
   }
 

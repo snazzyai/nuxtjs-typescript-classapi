@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <button class="btn" @click="changeCounter">{{buttonText}}</button>
+    <button class="btn" @click="changeCounter">
+      {{buttonText}}
+    </button>
   </div>
 </template>
 <script lang="ts">
@@ -8,11 +10,11 @@ import {Vue, Prop, Component, Emit} from 'vue-property-decorator'
 
 @Component
 export default class Button extends Vue {
-  @Prop()
+  @Prop ()
   buttonText!: string;
 
-  @Emit()
-  changeCounter():void{
+  @Emit ()
+  changeCounter ():void {
     this.$emit('counter-change')
   }
 }
