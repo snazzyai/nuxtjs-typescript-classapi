@@ -18,12 +18,12 @@ import {Vue, Component, Prop, Emit} from 'vue-property-decorator'
 export default class Counter extends Vue {
   counter: number = 0
 
-  @Emit()
+
   increment():void{
     this.counter++
   }
 
-  @Emit()
+
   decrement():void{
     this.counter--
   }
