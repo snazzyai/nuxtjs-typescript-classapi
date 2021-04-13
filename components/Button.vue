@@ -1,0 +1,26 @@
+<template>
+  <div class="container">
+    <button class="btn" @click="changeCounter">{{buttonText}}</button>
+  </div>
+</template>
+<script lang="ts">
+import {Vue, Prop, Component} from 'vue-property-decorator'
+
+@Component
+export default class Button extends Vue {
+  @Prop()
+  buttonText!: string;
+
+  changeCounter():void{
+    this.$emit('counter-change')
+  }
+}
+</script>
+<style scoped>
+  .btn {
+    color: green;
+    background: #fff;
+    margin: .5rem 2rem
+
+  }
+</style>
