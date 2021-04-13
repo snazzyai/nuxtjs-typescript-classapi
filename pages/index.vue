@@ -12,16 +12,18 @@
 </template>
 
 <script lang="ts">
-import {Vue, Component, Prop} from 'vue-property-decorator'
+import {Vue, Component, Prop, Emit} from 'vue-property-decorator'
 
 @Component
 export default class Counter extends Vue {
   counter: number = 0
 
+  @Emit()
   increment():void{
     this.counter++
   }
 
+  @Emit()
   decrement():void{
     this.counter--
   }
